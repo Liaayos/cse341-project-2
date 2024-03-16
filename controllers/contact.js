@@ -4,6 +4,36 @@ const Contact = db.contacts;
 exports.create = (req, res) => {
   // Validate request
   if (!req.body.firstName) {
+    res.status(400).send({ message: 'First name can not be empty!' });
+    return;
+  }
+
+  if (!req.body.lastName) {
+    res.status(400).send({ message: 'Last name can not be empty!' });
+    return;
+  }
+
+  if (!req.body.email) {
+    res.status(400).send({ message: 'Email can not be empty!' });
+    return;
+  }
+
+  if (!req.body.cellphoneNumber) {
+    res.status(400).send({ message: 'Cellphone can not be empty!' });
+    return;
+  }
+
+  if (!req.body.birthday) {
+    res.status(400).send({ message: 'Birthday can not be empty!' });
+    return;
+  }
+
+  if (!req.body.address) {
+    res.status(400).send({ message: 'Adress can not be empty!' });
+    return;
+  }
+
+  if (!req.body.isActive) {
     res.status(400).send({ message: 'Content can not be empty!' });
     return;
   }

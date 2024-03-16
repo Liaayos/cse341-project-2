@@ -3,9 +3,18 @@ const Cellphone = db.cellphones;
 
 exports.create = (req, res) => {
   // Validate request
-  console.log(req.body);
   if (!req.body.brand) {
-    res.status(400).send({ message: 'Content can not be empty!' });
+    res.status(400).send({ message: 'Brand can not be empty!' });
+    return;
+  }
+
+  if (!req.body.model) {
+    res.status(400).send({ message: 'Model can not be empty!' });
+    return;
+  }
+
+  if (!req.body.series) {
+    res.status(400).send({ message: 'Series can not be empty!' });
     return;
   }
 

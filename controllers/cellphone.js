@@ -81,7 +81,13 @@ exports.update = (req, res) => {
 
   const id = req.params.cellphone_id;
 
-  Cellphone.findByIdAndUpdate(id, req.body, { useFindAndModify: false })
+  const cellphone = new Cellphone({
+    brand: req.body.brand,
+    model: req.body.model,
+    series: req.body.series
+  });
+
+  Cellphone.findByIdAndUpdate(id, cellphone, { useFindAndModify: false })
     .then((data) => {
       if (!data) {
         res.status(404).send({

@@ -3,7 +3,6 @@ const Contact = db.contacts;
 
 exports.create = (req, res) => {
   // Validate request
-  console.log(req.body);
   if (!req.body.firstName) {
     res.status(400).send({ message: 'Content can not be empty!' });
     return;
@@ -92,9 +91,19 @@ exports.update = (req, res) => {
   }
 
   const id = req.params.contact_id;
-  console.log(id)
 
-  Contact.findByIdAndUpdate(id, req.body, { useFindAndModify: false })
+  const contact = new Contact({
+    firstName: req.body.firstName,
+    lastName: req.body.lastName,
+    email: req.body.email,
+    cellphoneNumber: req.body.cellphoneNumber,
+    birthday: req.body.birthday,
+    address: req.body.address,
+    isActive: req.body.isActive
+  });
+  
+
+  Contact.findByIdAndUpdate(id, contact, { useFindAndModify: false })
     .then((data) => {
       if (!data) {
         res.status(404).send({

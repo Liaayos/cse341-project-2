@@ -1,7 +1,7 @@
 {
-  "name": "cse341-project-1",
+  "name": "cse341-project-2",
   "version": "1.0.0",
-  "description": "My firts project",
+  "description": "My second project",
   "main": "index.js",
   "scripts": {
     "swagger": "node ./swagger.js",
@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Liaayos/cse341-project-1.git"
+    "url": "git+https://github.com/Liaayos/cse341-project-2.git"
   },
   "author": "Lia Ayos",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Liaayos/cse341-project-1/issues"
+    "url": "https://github.com/Liaayos/cse341-project-2/issues"
   },
-  "homepage": "https://github.com/Liaayos/cse341-project-1#readme",
+  "homepage": "https://github.com/Liaayos/cse341-project-2#readme",
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",

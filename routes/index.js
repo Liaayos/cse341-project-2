@@ -2,7 +2,7 @@ const routes = require('express').Router();
 const contact = require('./contact');
 const cellphone = require('./cellphone');
 const swaggerUi = require('swagger-ui-express');
-const swaggerDocument = require('../swagger.json');
+const swaggerDocument = require('../swagger-output.json');
 
 
 routes.use('/api-docs', swaggerUi.serve);

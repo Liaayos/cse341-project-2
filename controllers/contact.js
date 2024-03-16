@@ -19,7 +19,7 @@ exports.create = (req, res) => {
   }
 
   if (!req.body.cellphoneNumber) {
-    res.status(400).send({ message: 'Cellphone can not be empty!' });
+    res.status(400).send({ message: 'Cellphone number can not be empty!' });
     return;
   }
 

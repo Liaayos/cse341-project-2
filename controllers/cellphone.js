@@ -90,11 +90,13 @@ exports.update = (req, res) => {
 
   const id = req.params.cellphone_id;
 
-  const cellphone = new Cellphone({
+  var cellphone = new Cellphone({});
+
+  cellphone = {
     brand: req.body.brand,
     model: req.body.model,
     series: req.body.series
-  });
+  };
 
   Cellphone.findByIdAndUpdate(id, cellphone, { useFindAndModify: false })
     .then((data) => {
@@ -106,7 +108,7 @@ exports.update = (req, res) => {
     })
     .catch((err) => {
       res.status(500).send({
-        message: 'Error updating Cellphone with id=' + id,
+        message: 'Error updating Cellphone with id=' + id + ' ' + err
       });
     });
 };
@@ -114,7 +116,6 @@ exports.update = (req, res) => {
 // Delete a Cellphone with the specified id in the request
 exports.delete = (req, res) => {
   const id = req.params.cellphone_id;
-console.log(id)
   Cellphone.findByIdAndRemove(id)
     .then((data) => {
       if (!data) {

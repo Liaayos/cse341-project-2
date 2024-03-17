@@ -2,15 +2,27 @@
 #Get all users
 GET http://localhost:3000/contacts/
 
+### Get all users for render
+GET https://cse341-project-2-5mci.onrender.com/contacts
+
 ###Get all cellphones
 GET http://localhost:3000/cellphones/
+
+###Get all cellphones render
+GET https://cse341-project-2-5mci.onrender.com/cellphones
 
 
 ### Get contact by id
 GET http://localhost:3000/contacts/65f518fb43b8765c240a003f HTTP/1.1
 
+###Get all contact by id with render
+GET https://cse341-project-2-5mci.onrender.com/contacts/65f65eae7b246247e7961284
+
 ### Get cellphones by id
 GET http://localhost:3000/cellphones/65f51aab43b8765c240a0049 HTTP/1.1
+
+###Get cellphones by id with render
+GET https://cse341-project-2-5mci.onrender.com/cellphones/65f51aab43b8765c240a0049
 
 ###Create contact
 POST http://localhost:3000/contacts/ 
@@ -26,18 +38,57 @@ Content-Type: application/json
   "isActive": true
 }
 
+###Create contact with render
+POST https://cse341-project-2-5mci.onrender.com/contacts/
+Content-Type: application/json
+
+{
+  "firstName": "Agatha",
+  "lastName": "Suarez",
+  "email": "Agathacanto@unal.edu.co",
+  "cellphoneNumber": 3024624576,
+  "birthday": "1990-03-07",
+  "address": "calle 45b 33",
+  "isActive": true
+}
+
+
+###Create cellphone with render
+POST https://cse341-project-2-5mci.onrender.com/cellphones
+Content-Type: application/json
+
+{
+    "brand": "Novo",
+    "model": "Note",
+    "series": "10 s"
+}
+
 ###Create cellphone
 POST http://localhost:3000/cellphones/ 
 Content-Type: application/json
 
 {
-    "brand": "Redmi",
+    "brand": "Amarillo",
     "model": "Note",
     "series": "10 s"
 }
 
 ###Update contact
-PUT http://localhost:3000/contacts/65f5195843b8765c240a0045
+PUT http://localhost:3000/contacts/65f530d7ecbc3d491ddd48ab
+Content-Type: application/json
+
+{
+  "firstName": "Agatha",
+  "lastName": "Suarez",
+  "email": "zurycanto@unal.edu.co",
+  "cellphoneNumber": 563458445,
+  "birthday": "2024-31-12",
+  "address": "cra 45 # 66",
+  "isActive": true
+}
+
+###Update contact with render
+PUT https://cse341-project-2-5mci.onrender.com/contacts/65f65d157b246247e796127e
 Content-Type: application/json
 
 {
@@ -57,13 +108,28 @@ Content-Type: application/json
 {
     "brand": "Google inc.",
     "model": "Pixel",
-    "series": "6 pro"
+    "series": "6 pro Max"
+}
+
+###Update cellphone with render
+PUT https://cse341-project-2-5mci.onrender.com/cellphones/65f51aab43b8765c240a0049
+Content-Type: application/json
+
+{
+    "brand": "Google inc.",
+    "model": "Pixel",
+    "series": "6 pro Ultra Max Hiper"
 }
 
 
 ###Delete contact
 DELETE http://localhost:3000/contacts/65f5195843b8765c240a0045
 
-###Delete cellphone
+###Delete contact with render
+DELETE http://localhost:3000/contacts/65f65eae7b246247e7961284
+
+###Delete cellphone 
 DELETE http://localhost:3000/cellphones/65f51adf43b8765c240a004b
 
+###Delete cellphone with render
+DELETE http://localhost:3000/cellphones/65f665e97b246247e796129e

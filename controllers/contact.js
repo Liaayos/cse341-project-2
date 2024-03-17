@@ -122,7 +122,9 @@ exports.update = (req, res) => {
 
   const id = req.params.contact_id;
 
-  const contact = new Contact({
+  var contact = new Contact({});
+
+  contact = {
     firstName: req.body.firstName,
     lastName: req.body.lastName,
     email: req.body.email,
@@ -130,7 +132,7 @@ exports.update = (req, res) => {
     birthday: req.body.birthday,
     address: req.body.address,
     isActive: req.body.isActive
-  });
+  };
   
 
   Contact.findByIdAndUpdate(id, contact, { useFindAndModify: false })
@@ -143,7 +145,7 @@ exports.update = (req, res) => {
     })
     .catch((err) => {
       res.status(500).send({
-        message: 'Error updating Contact with id=' + id,
+        message: 'Error updating Contact with id=' + id + ' ' + err
       });
     });
 };

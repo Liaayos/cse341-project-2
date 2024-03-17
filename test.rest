@@ -126,10 +126,10 @@ Content-Type: application/json
 DELETE http://localhost:3000/contacts/65f5195843b8765c240a0045
 
 ###Delete contact with render
-DELETE http://localhost:3000/contacts/65f65eae7b246247e7961284
+DELETE https://cse341-project-2-5mci.onrender.com/contact/65f51aab43b8765c240a0049
 
 ###Delete cellphone 
 DELETE http://localhost:3000/cellphones/65f51adf43b8765c240a004b
 
 ###Delete cellphone with render
-DELETE http://localhost:3000/cellphones/65f665e97b246247e796129e
+DELETE https://cse341-project-2-5mci.onrender.com/cellphones/65f51aab43b8765c240a0049

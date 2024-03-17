@@ -52,7 +52,7 @@
                   "example": "any"
                 },
                 "cellphoneNumber": {
-                  "example": "any"
+                  "example": "number"
                 },
                 "birthday": {
                   "example": "any"
@@ -61,7 +61,7 @@
                   "example": "any"
                 },
                 "isActive": {
-                  "example": "any"
+                  "example": "boolean"
                 }
               }
             }

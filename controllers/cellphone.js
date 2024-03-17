@@ -123,7 +123,7 @@ exports.delete = (req, res) => {
           message: `Cannot delete Cellphone with id=${id}. Maybe Cellphone was not found!`,
         });
       } else {
-        res.send({
+        res.status(204).send({
           message: 'Cellphone was deleted successfully!',
         });
       }

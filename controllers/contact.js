@@ -161,7 +161,7 @@ exports.delete = (req, res) => {
           message: `Cannot delete Contact with id=${id}. Maybe Contact was not found!`,
         });
       } else {
-        res.send({
+        res.status(204).send({
           message: 'Contact was deleted successfully!',
         });
       }
